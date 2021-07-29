@@ -5,11 +5,13 @@ public class Sweet {
         String name;
         double weight;
         String manufactor;
+        static int count=0;
 
-        Sweet (String name, double weight, String manufactor){
+    Sweet (String name, double weight, String manufactor){
             this.name=name;
             this.weight=weight;
             this.manufactor=manufactor;
+            count++;
         }
 
     public String getName() {
@@ -35,4 +37,18 @@ public class Sweet {
     public void setManufactor(String manufactor) {
         this.manufactor = manufactor;
     }
+
+    public String toString() {
+        return "Sweet{" +
+                "name='" + name + '\'' +
+                ", weight=" + weight +
+                ", manufactor='" + manufactor + '\'' +
+                '}';
+    }
+
+    public int countArrayLength() {
+        Sweet[] array = new Sweet[count];
+        return array.length;
+        }
 }
+

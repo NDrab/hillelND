@@ -49,10 +49,10 @@ public class Candy extends Sweet {
     @Override
     public String toString() {
         return "Candy{" +
-                "Леденцы=" + hardCandy +
-                ", Имя ='" + name + '\'' +
-                ", Вес =" + weight +
-                ", Производитель ='" + manufactor + '\'' +
+                "name='" + name + '\'' +
+                ", weight =" + weight +
+                ", manufactor ='" + manufactor + '\'' +
+                ", isHardCandy ='" + hardCandy + '\'' +
                 '}';
     }
 }

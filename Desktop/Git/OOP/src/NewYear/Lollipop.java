@@ -1,13 +1,16 @@
 package NewYear;
 
-public class Lollipop extends Candy {
+public class Lollipop extends Sweet {
 
-    private boolean gumInside;
+    private boolean gumInside=true;
+    private boolean hardCandy=true;
 
     public Lollipop (String getName, double getWeight, String getManufactor, boolean hardCandy, boolean gumInside ){
-        super(getName, getWeight, getManufactor, hardCandy);
-        this.gumInside=false;
+        super(getName, getWeight, getManufactor);
+        this.hardCandy=hardCandy;
+        this.gumInside=gumInside;
     }
+
 
     public boolean getGumInside() {
         return gumInside;
@@ -17,14 +20,12 @@ public class Lollipop extends Candy {
         this.gumInside = gumInside;
     }
 
-    @Override
     public boolean getHardCandy() {
-        return super.getHardCandy();
+        return hardCandy;
     }
 
-    @Override
     public void setHardCandy(boolean hardCandy) {
-        super.setHardCandy(hardCandy);
+        this.hardCandy = hardCandy;
     }
 
     @Override
@@ -59,6 +60,12 @@ public class Lollipop extends Candy {
 
     @Override
     public String toString() {
-        return super.toString() + "с жевательной резинкой " + getGumInside();
+        return "Lollipop {" +
+                "name='" + name + '\'' +
+                ", weight =" + weight +
+                ", manufactor ='" + manufactor + '\'' +
+                ", isHardCandy ='" + hardCandy + '\'' +
+                ", isGumInside ='" + gumInside + '\'' +
+                '}';
     }
 }
