@@ -1,20 +1,46 @@
-package NewYear;
+package Homework_Files;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.List;
+
+import static java.util.Collections.sort;
 
 public class Main {
 
-        public  static void main (String [] args){
-            Candy candyA = new Candy("Cow", 100.00, "Koko", true);
-            Candy candyB = new Candy("Crown", 120.20, "Rafl", false);
-            Sweet sweetA = new Sweet("Beauty", 120.10, "NewLife");
-            Sweet sweetB = new Sweet("Mars", 20.00, "Sweet");
-            Lollipop lollipopA = new Lollipop("Chupa", 55.50, "ASV", true, true);
-            Lollipop lollipopB = new Lollipop("Chups", 70.10, "TTT", false, false);
+    public static void main (String [] args){
 
-       double totalWeight = candyA.weight+ candyB.weight+sweetA.weight+ sweetB.weight+ lollipopA.weight+ lollipopB.weight;
-         String format = String.format("Общий вес конфет %1$,.2f грамм ",totalWeight );
-            System.out.println(format);
-        }
+        House house1 = new House(100, 100000, "Mykolaiv", true);
+        House house2 = new House(200, 2000000, "Odesa", true);
+        House house3 = new House(53, 15000, "Kherson", false);
+        House house4 = new House(74, 160000, "Kyiv", true);
+        House house5 = new House(153, 50000, "Khmelnytsky", true);
+        House house6 = new House(106, 100000, "Lviv", false);
+
+       List <House> listHouse = new ArrayList<>();
+       listHouse.add(house1);
+       listHouse.add(house2);
+       listHouse.add(house3);
+       listHouse.add(house4);
+       listHouse.add(house5);
+       listHouse.add(house6);
+
+
+        System.out.println("Sort by price");
+       for (House item : listHouse
+        ) { System.out.println(item); }
+
+       sort(listHouse);
+        for (House item : listHouse
+             ) { System.out.println(item); }
+
+        System.out.println("Sort by area");
+
+        sort(listHouse, new HouseCompare());
+        for (House item : listHouse
+        ) { System.out.println(item); }
+
 
     }
-
+    }
 
