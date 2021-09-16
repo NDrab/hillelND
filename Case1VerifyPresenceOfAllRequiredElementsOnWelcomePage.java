@@ -19,30 +19,30 @@ public class Case1VerifyPresenceOfAllRequiredElementsOnWelcomePage {
         webDriver.quit(); }
 
     @BeforeMethod
-    public void NavigateToTheTestPage(){
+    public void navigateToTheTestPage(){
         webDriver.get("https://www.yellowtailwine.com/"); }
 
    @Test
-    public void VerifyTheUrlPageisCorrect() {
+    public void verifyTheUrlPageisCorrect() {
        Assert.assertTrue(webDriver.getCurrentUrl().equals(siteYellowTaleUrl)); }
 
     @Test
-    public void VerifyPhraseLegalDrinkingAgeIsDisplayed(){
+    public void verifyPhraseLegalDrinkingAgeIsDisplayed(){
         FirstPage firstPage = new FirstPage(webDriver);
         Assert.assertTrue(firstPage.findLegalDrinkingAgePhrase().isEnabled()); }
 
     @Test
-    public void VerifyCheckboxLegalDrinkingAgeIsDisplayed(){
+    public void verifyCheckboxLegalDrinkingAgeIsDisplayed(){
         FirstPage firstPage = new FirstPage(webDriver);
         Assert.assertTrue(firstPage.findLegalDrinkingAgeCheckbox().isEnabled()); }
 
     @Test
-    public void VerifyDropdownForCountrySelectIsDisplayed(){
+    public void verifyDropdownForCountrySelectIsDisplayed(){
         FirstPage firstPage = new FirstPage(webDriver);
         Assert.assertTrue(firstPage.findCountryListDropdown().isEnabled()); }
 
     @Test
-    public void VerifyWelcomeButtonIsInactive(){
+    public void verifyWelcomeButtonIsInactive(){
         FirstPage firstPage = new FirstPage(webDriver);
         Assert.assertTrue(firstPage.findWelcomeButton().isDisplayed());
     }}
