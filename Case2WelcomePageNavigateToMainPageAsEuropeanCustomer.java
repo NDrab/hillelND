@@ -30,11 +30,13 @@ public class Case2WelcomePageNavigateToMainPageAsEuropeanCustomer {
 
    firstPage.clickOnCheckbox();
    firstPage.selectCountryFromDropDown();
-   //Assert.assertEquals(firstPageView.SelectCountryFromDropDown(),"Europe");
+  
+   Assert.assertEquals(firstPage.selectCountryFromDropDown(),"Europe");
    firstPage.waitUntilWelcomeButtonIsAvailable();
    firstPage.clickWelcomeButton();
 
-   firstPage.assertNavigationToMainPageAsCustomer();//this is an assert
-}}
+   //after navigation to main page as a customer, the confirmation of legal age should be absent,as a result l.size=0
+   List<WebElement> l= webDriver.findElements(By.xpath("//*[contains(text(),'I am of legal drinking age in')]"));
+   Assert.assertTrue(l.size()==0); }}
 
 
