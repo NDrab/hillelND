@@ -37,6 +37,6 @@ public class Case8WhereToBuyEnterValidPostalCode {
     mainPage.waitMainPageElementPresence();
 
     WhereToBuyPage whereToBuyPage = mainPage.navigateToFindWhereToBuy();
-    whereToBuyPage.SearchAreaByZipCode();
+    whereToBuyPage.searchAreaByZipCode();
 
     Assert.assertTrue(whereToBuyPage.findMap().isDisplayed()); }}
