@@ -35,14 +35,12 @@ public class Case4MainPageMenuButtonLogicOpenHeader {
 
     mainPage.waitMainPageElementPresence();
 
-    Assert.assertTrue(mainPage.findWines().isDisplayed()
-            && mainPage.findWhereToBuy().isDisplayed()
-            && mainPage.findCocktails().isDisplayed()
-            && mainPage.findOurStory().isDisplayed()
-            && mainPage.findFaqs().isDisplayed()
-            && mainPage.findContact().isDisplayed()
-            && mainPage.findRegionSelector().isDisplayed());
-
-  }}
+    Assert.assertTrue(mainPage.findWines().isDisplayed());
+    Assert.assertTrue(mainPage.findWhereToBuy().isDisplayed());
+    Assert.assertTrue(mainPage.findCocktails().isDisplayed());
+    Assert.assertTrue(mainPage.findOurStory().isDisplayed());
+    Assert.assertTrue(mainPage.findFaqs().isDisplayed());
+    Assert.assertTrue(mainPage.findContact().isDisplayed());
+    Assert.assertTrue(mainPage.findRegionSelector().isDisplayed());}}
 
 
