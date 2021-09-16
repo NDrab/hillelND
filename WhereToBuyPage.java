@@ -1,6 +1,4 @@
 package Pages;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,15 +22,12 @@ public class WhereToBuyPage {
     public WhereToBuyPage (WebDriver webDriver) { this.webDriver = webDriver;
         PageFactory.initElements(webDriver,this); }
 
-   public void SearchAreaByZipCode(){
+   public void searchAreaByZipCode(){
 
        zipInputField.sendKeys("2000");
        searchButton.click();
        (new WebDriverWait(webDriver, 10))
-               .until(ExpectedConditions.visibilityOf(map));
-    }
+               .until(ExpectedConditions.visibilityOf(map));}
 
-    public WebElement FindMap(){
-        return map;
-    }
-}
+    public WebElement findMap(){
+        return map;}}
