@@ -44,7 +44,7 @@ public class Case1VerifyPresenceOfAllRequiredElementsOnWelcomePage {
     @Test
     public void verifyWelcomeButtonIsInactive(){
         FirstPage firstPage = new FirstPage(webDriver);
-        Assert.assertTrue(firstPage.findWelcomeButton().isDisplayed());
+        Assert.assertTrue(firstPage.findWelcomeButton().isEnabled());
     }}
 
 
