@@ -40,11 +40,4 @@ public class Case10CocktailsNavigateToCocktailRecipePage {
     CocktailsPage cocktailsPage = mainPage.navigateToCocktailsPage();
     cocktailsPage.navigateToRaspberryRoseCocktail();
 
-    Assert.assertEquals(webDriver.getCurrentUrl(),raspBerryRoseExpectedURL);
-
-
-
-
-
-    }
-}
+    Assert.assertEquals(webDriver.getCurrentUrl(),raspBerryRoseExpectedURL); }}
